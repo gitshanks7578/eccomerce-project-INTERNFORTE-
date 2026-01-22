@@ -1,5 +1,4 @@
-// filter.js - global filtering logic
-// CURRENT_CATEGORY must be defined in HTML before including this
+
 
 const grid = document.getElementById("productGrid");
 const filterSelect = document.getElementById("filterSelect");
@@ -40,7 +39,7 @@ function applyFilter(option) {
       filtered.sort((a,b) => a.price - b.price);
       break;
     case "trending":
-      filtered.sort((a,b) => b.price - a.price); // demo: trending = higher price first
+      filtered.sort((a,b) => b.price - a.price); 
       break;
     case "recommended":
     default:
