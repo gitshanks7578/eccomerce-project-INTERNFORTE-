@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Electronics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/product-style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html" class="arrow">
+        <i class="ri-arrow-left-s-line"></i>
+    </a>
+    <h1>Electronics</h1>
+  </header>
+
+  <main class="container">
+
+    <!-- Filter Dropdown -->
+    <section class="filters">
+      <label for="filterSelect">Filter: </label>
+      <select id="filterSelect">
+        <option value="recommended">Recommended</option>
+        <option value="trending">Trending</option>
+        <optgroup label="Price">
+          <option value="price_under_2000">Under ₹2000</option>
+          <option value="price_3000_5000">₹3000 - ₹5000</option>
+          <option value="price_above_5000">Above ₹5000</option>
+        </optgroup>
+      </select>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="product-grid" id="productGrid"></section>
+
+  </main>
+
+  <!-- Product Data + Global Filter JS -->
+  <script>
+    const CURRENT_CATEGORY = "electronics";
+
+  </script>
+  <script src="./js/products.js"></script>
+  <script src="./js/filter.js"></script>
+
+</body>
+</html>

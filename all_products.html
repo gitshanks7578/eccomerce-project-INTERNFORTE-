@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Electronics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/product-style.css" />
+  
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html" class="arrow">
+        <i class="ri-arrow-left-s-line"></i>
+    </a>
+    <h1>All available products</h1>
+  </header>
+
+  <main class="container">
+    <section class="product-grid" id="productGrid">
+     
+    </section>
+  </main>
+
+
+
+  <!-- Product Data -->
+  <script src="./js/products.js"></script>
+
+  <!-- Render Logic -->
+  <script>
+    const grid = document.getElementById("productGrid");
+
+   
+
+    PRODUCTS.forEach(product => {
+      const card = document.createElement("div");
+      card.className = "product-card";
+
+      card.innerHTML = `
+        <img src="./assets/products/${product.image}" alt="${product.name}">
+        <h4>${product.name}</h4>
+        <p>₹${product.price}</p>
+      `;
+
+      grid.appendChild(card);
+    });
+  </script>
+
+</body>
+</html>
